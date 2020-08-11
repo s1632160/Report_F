@@ -35,6 +35,9 @@ class Report_ui {
       btn.addEventListener("click", () => {
         if (btn.getAttribute("number"))
           this.keisan.setHouhou(btn.getAttribute("number"));
+          let number = this.keisan.setHouhou(btn.getAttribute("number"));
+          let target = document.getElementById("area2");
+          target.insertAdjacentHTML = number;
       });
     }
   }
