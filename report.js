@@ -62,7 +62,7 @@ class Keisan {
         else a = c;
       } while (Math.abs(a - b) > this.aler);
       target.insertAdjacentHTML('beforeend', "近似解 x = " + c);
-    }else if(this.houhou=2){
+    }else{
       let a = 1.0;
       let b;
 
