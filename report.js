@@ -81,8 +81,8 @@ class Keisan {
   setAler(f){
     this.aler = f;
   }
-  setHouhou(g){
-    this.houhou = g;
+  setHouhou(value){
+    this.houhou = value;
   }
 }
 
