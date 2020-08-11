@@ -33,8 +33,8 @@ class Report_ui {
   setHouhou_ui(btnArray) {
     for (let btn of btnArray) {
       btn.addEventListener("click", () => {
-        if (btn.getAttribute("value"))
-          this.keisan.setHouhou(btn.getAttribute("value"));
+        if (btn.getAttribute("number"))
+          this.keisan.setHouhou(btn.getAttribute("number"));
       });
     }
   }
