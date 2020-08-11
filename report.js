@@ -30,14 +30,11 @@ class Report_ui {
       });
     }
   }
-  setHouhou_ui(btnArray) {
-    for (let btn of btnArray) {
-      btn.addEventListener("click", () => {
-        if (btn.getAttribute("number"))
-          this.keisan.setHouhou(btn.getAttribute("number"));
-          let number = this.keisan.setHouhou(btn.getAttribute("number"));
-          let target = document.getElementById("area2");
-          target.insertAdjacentHTML = number;
+  setHouhou_ui(btnArray2) {
+    for (let btn2 of btnArray2) {
+      btn2.addEventListener("click", () => {
+        if (btn2.getAttribute("number"))
+          this.keisan.setHouhou(btn2.getAttribute("number"));
       });
     }
   }
