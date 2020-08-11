@@ -42,7 +42,6 @@ class Report_ui {
 class Keisan {
   constructor() {
     this.aler = 0.0001;
-    this.houhou = "nibun";
   }
   next() {
     let target = document.getElementById("area2");
