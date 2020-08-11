@@ -33,8 +33,8 @@ class Report_ui {
   setHouhou_ui(btnArray) {
     for (let btn of btnArray) {
       btn.addEventListener("click", () => {
-        if (btn.getAttribute("value"))
-          this.keisan.setHouhou(btn.getAttribute("value"));
+        if (btn.getAttribute("number"))
+          this.keisan.setHouhou(btn.getAttribute("number"));
       });
     }
   }
@@ -46,7 +46,7 @@ class Keisan {
   }
   next() {
     let target = document.getElementById("area2");
-    if(this.houhou="nibun"){
+    if(this.houhou=1){
       let a = 0.0;
       let b = 1.0;
       let c;
@@ -63,7 +63,7 @@ class Keisan {
         else a = c;
       } while (Math.abs(a - b) > this.aler);
       target.insertAdjacentHTML('beforeend', "近似解 x = " + c);
-    }else if(this.houhou="nuton"){
+    }else if(this.houhou=2){
       let a = 1.0;
       let b;
 
