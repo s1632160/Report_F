@@ -50,6 +50,7 @@ class Keisan {
       let b = 1.0;
       let c;
 
+      target.insertAdjacentHTML('beforeend', this.houhou);
       target.insertAdjacentHTML('beforeend', "<br>x^3 + x - 1 の2分法による数値計算<br>");
       target.insertAdjacentHTML('beforeend', "初期値 a=" + a + "<br>");
       target.insertAdjacentHTML('beforeend', "初期値 b=" + b + "<br>");
@@ -65,6 +66,7 @@ class Keisan {
       let a = 1.0;
       let b;
 
+      target.insertAdjacentHTML('beforeend', this.houhou);
       target.insertAdjacentHTML('beforeend', "<br>x^3 + x - 1 のニュートン法による数値計算<br>");
       target.insertAdjacentHTML('beforeend', "初期値 a=" + a + "<br>");
 
