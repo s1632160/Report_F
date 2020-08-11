@@ -72,7 +72,7 @@ class Keisan {
       while (1) {
         b = a - func_y(a) / func_z(a);
         target.insertAdjacentHTML('beforeend', b + "<br>");
-        if (Math.abs(a - b) > this.aler) break;
+        if (Math.abs(a - b) < this.aler) break;
         else a = b;
       }
       target.insertAdjacentHTML('beforeend', "近似解 x = " + b);
