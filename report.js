@@ -50,7 +50,8 @@ class Keisan {
       let a = 0.0;
       let b = 1.0;
       let c;
-
+      
+      target.insertAdjacentHTML('beforeend', "<br>"+this.aler+"<br>");
       target.insertAdjacentHTML('beforeend', "<br>x^3 + x - 1 の2分法による数値計算<br>");
       target.insertAdjacentHTML('beforeend', "初期値 a=" + a + "<br>");
       target.insertAdjacentHTML('beforeend', "初期値 b=" + b + "<br>");
