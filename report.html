@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>Report</title>
+    <link rel="stylesheet" href="report.css">
+    <script src="report.js"></script>
+  </head>
+  <body>
+    <div id="contents">
+      <div id="panel">
+        <div>
+          <button type="button" id="start" class="normal">start</button>
+          <button type="button" id="clear" class="normal">clear</button>
+        </div>
+        <div id="panel2">
+          <p>許容誤差</p>
+          <button type="button" id="b02" class="size" number=0.0001>.0001</button>
+          <button type="button" id="b03" class="size" number=0.0000001>.0000001</button>
+          <button type="button" id="b04" class="size" number=0.000000001>.000000001</button>
+        </div>
+        <div id="panel3">
+          <p>計算法の選択</p>
+          <button type="button" id="c01" class="size" value=nibun>二分法</button>
+          <button type="button" id="c02" class="size" value=nuton>ニュートン法</button>
+        </div>
+      </div>
+      <div id="graph">
+        <div id="area1" class="area">
+          <canvas id="canvas" width="460" height="460" style="max-width: 100%; height: auto; max-height: 100%">
+            このブラウザはHTML5のCanvas要素に対応していないためグラフを表示できません。
+            </canvas>
+            <script src="https://sekika.github.io/js/graph.js"></script>
+            
+            <script>
+            'use strict';
+            
+            // Initialize canvas
+            var c = document.getElementById('canvas');
+            var ctx = c.getContext('2d');
+            ctx.font = "20px serif"; // Font of the text
+            ctx.lineWidth = 1; // Line width
+            
+            // Set Cartesian coodinate system for the graph (GC)
+            // Origin of GC with respect to canvas coordinate = (ctx.originX, ctx.originY)
+            ctx.originX = 230;
+            ctx.originY = 300;
+            // Unit vector of GC with respect to canvas coordinate = (ctx.unitX, ctx.unitY)
+            ctx.unitX = 50;
+            ctx.unitY = -50;
+            
+            // Draw graphs
+            drawAxis(ctx); // Draw axis and labels
+            drawScaleX(ctx); // Draw scale of x axis
+            drawScaleY(ctx); // Draw scale of y axis
+            ctx.strokeStyle = "blue"; // Color of the curve
+            draw(ctx, exp); // Draw y=exp(x) curve
+            ctx.fillStyle = "blue"; // Color of legend
+            ctx.fillText("y = x^3 + x - 1", 320, 80); // Write legend
+            
+            function exp(x) {
+                return (x ** 3) + x - 1;
+            }
+            </script>
+        </div>
+        <div id="area2" class="area">
+          <p>計算結果出力</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
